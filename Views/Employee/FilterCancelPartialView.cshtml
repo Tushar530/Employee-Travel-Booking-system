@@ -1,0 +1,42 @@
+﻿
+@model EmployeeTravel.Models.Travel
+
+
+
+
+
+
+
+<td>
+
+    @Html.DisplayFor(model => model.TravelStartdate)
+
+</td>
+
+<td>
+
+    @Html.DisplayFor(model => model.TravelEnddate)
+
+</td>
+
+<td>
+
+    @Html.DisplayFor(model => model.TravelSource)
+
+</td>
+
+<td>
+
+    @Html.DisplayFor(model => model.TravelDestination)
+
+</td>
+
+
+
+<td>
+
+    @Html.ActionLink("Cancel Booking", "Delete", new { id = Model.TravelID })
+
+
+
+</td>

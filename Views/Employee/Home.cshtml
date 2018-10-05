@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+
+<h2>Home</h2>
+
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial;
+    }
+
+
+    .topnav {
+        overflow: hidden;
+        background-color: aliceblue;
+    }
+
+        .topnav a {
+            float: left;
+            color: red;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+            .topnav a:hover {
+                background-color: white;
+                color: black;
+            }
+
+            .topnav a:active {
+                background-color: purple;
+                color: yellow;
+            }
+</style>
+
+
+    <body background="~/Images/banners-for-pr_1540x866_051-5.jpg" >
+    <div class="topnav" id="lo">
+
+
+        @Html.ActionLink("Book Travel", "Travel")
+
+        @Html.ActionLink("Search Booking by Travel ID", "FilterSearch")
+
+        @Html.ActionLink("Cancel Booking by Travel ID", "FilterCancelView")
+
+        @Html.ActionLink("Sign Out", "Index")
+
+    </div>
+</body>

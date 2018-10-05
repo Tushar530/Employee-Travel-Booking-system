@@ -1,0 +1,64 @@
+﻿@model EmployeeTravel.Models.Travel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+<body background="~/Images/1.jpg ">
+
+    <h3>Are you sure you want to Cancel this Booking?</h3>
+    <div>
+
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.TravelStartdate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TravelStartdate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TravelEnddate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TravelEnddate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TravelSource)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TravelSource)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TravelDestination)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TravelDestination)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Cancel Booking" class="btn btn-default" /> |
+
+                @*<div >
+                        <a href="Home">Delete by Travel Id </a>
+                    </div>*@
+                @Html.ActionLink("Back to Home", "FilterCancelView")
+            </div>
+
+        }
+    </div>
+    </body>

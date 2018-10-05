@@ -1,0 +1,100 @@
+﻿
+@model IEnumerable < EmployeeTravel.Models.Travel>
+
+
+
+@{
+
+    ViewBag.Title = "FilterSearch";
+
+}
+
+
+
+<h2>FilterSearch</h2>
+
+
+
+
+
+
+
+
+
+@using (Html.BeginForm())
+
+{
+
+
+
+    <body background="~/Images/1.jpg ">
+
+
+
+
+
+        <p>
+
+            Enter Search Character: @Html.TextBox("id")<br />
+
+            <input type="submit" value="Search" class="btn btn-default" />
+
+        </p>
+
+        <table class="table">
+
+            <tr>
+
+                <th>
+
+                    @Html.DisplayNameFor(model => model.TravelStartdate)
+
+                </th>
+
+                <th>
+
+                    @Html.DisplayNameFor(model => model.TravelEnddate)
+
+                </th>
+
+                <th>
+
+                    @Html.DisplayNameFor(model => model.TravelSource)
+
+                </th>
+
+                <th>
+
+                    @Html.DisplayNameFor(model => model.TravelDestination)
+
+                </th>
+
+
+
+                <th></th>
+
+            </tr>
+
+
+
+            @foreach (var item in Model)
+
+            {
+
+
+
+                <tr>
+
+                    @Html.Partial("FilterPartialSearchView", item)
+
+                </tr>
+
+            }
+
+
+
+        </table>
+
+        @Html.ActionLink("Back to Home", "Home")
+    </body>
+}
